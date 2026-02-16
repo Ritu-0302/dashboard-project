@@ -22,6 +22,10 @@ public class ExamController {
     public ExamController(CsvService csvService) {
         this.csvService = csvService;
     }
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/dashboard";
+    }
 
     // 🔹 Test API
     @GetMapping("/test")
