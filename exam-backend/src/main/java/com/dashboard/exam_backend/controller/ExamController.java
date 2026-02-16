@@ -22,10 +22,6 @@ public class ExamController {
     public ExamController(CsvService csvService) {
         this.csvService = csvService;
     }
-    @GetMapping("/")
-    public String home() {
-        return "redirect:/dashboard";
-    }
 
     // 🔹 Test API
     @GetMapping("/test")
@@ -35,7 +31,7 @@ public class ExamController {
     }
 
     // 🔹 Dashboard
-    @GetMapping("/dashboard")
+    @GetMapping("/")
     public String dashboard(
             @RequestParam(required = false) String eventId,
             @RequestParam(required = false) String startDate,
