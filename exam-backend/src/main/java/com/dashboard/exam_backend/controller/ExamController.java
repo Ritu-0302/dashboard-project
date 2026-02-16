@@ -31,7 +31,7 @@ public class ExamController {
     }
 
     // 🔹 Dashboard
-    @GetMapping("/dashboard")
+    @GetMapping("/")
     public String dashboard(
             @RequestParam(required = false) String eventId,
             @RequestParam(required = false) String startDate,
